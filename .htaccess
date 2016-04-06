@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.goodage\.co$
+RewriteRule ^/?$ "http\:\/\/goodage\.co\/“ [R=301,L]
