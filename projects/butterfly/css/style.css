@@ -1,0 +1,15 @@
+body
+{
+	margin : 0;
+	background-image: -webkit-linear-gradient(54deg, #F2A0AF 5%, #D07081 99%);
+	background-image: -o-linear-gradient(54deg, #F2A0AF 5%, #D07081 99%);
+	background-image: linear-gradient(144deg, #F2A0AF 5%, #D07081 99%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+canvas
+{
+  max-height: 100vh;
+  max-width: 100vw;
+}
