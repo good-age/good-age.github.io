@@ -1,0 +1,57 @@
+body
+{
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+
+	margin : 0;
+	background-image: -webkit-linear-gradient(54deg, rgb(0,174,239) 5%, rgb(38,34,98) 99%);
+	background-image: -o-linear-gradient(54deg, rgb(0,174,239) 5%, rgb(38,34,98) 99%);
+	/* background-image: linear-gradient(144deg, rgb(0,174,239) 5%, rgb(38,34,98) 99%); */
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	font-family: 'Libre Franklin', sans-serif;
+	color: rgba(255,255,255,1);
+}
+
+canvas
+{
+  max-height: 100vh;
+  max-width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+div.text
+{	
+	pointer-events: none;
+	margin-top: 120px;
+	z-index: 100;
+}
+
+h1
+{
+	font-size: 39px;
+	margin-bottom: 24px;	
+	color: rgba(255,255,255,1);	
+}
+
+p
+{
+	font-size: 21px;
+	line-height: 26px;
+	margin-bottom: 20px;
+	color: rgba(255,255,255,.54);		
+}
+
+div p:last-of-type {
+	margin-bottom: 40px;
+}
+
+span
+{
+	font-size: 19px;
+	color: rgba(255,255,255,.22);	
+}
