@@ -39,7 +39,7 @@ var windStrength = 0;
 var windForce = new THREE.Vector3( 0, 0, 0 );
 
 var ballPosition = new THREE.Vector3( 0, - 45, 0 );
-var ballSize = 10; //40
+var ballSize = 40; //40
 
 var tmpForce = new THREE.Vector3();
 

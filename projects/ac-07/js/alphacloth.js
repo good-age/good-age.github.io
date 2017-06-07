@@ -237,7 +237,7 @@ function render() {
 	clothGeometry.verticesNeedUpdate = true;
 
 	// mouse 3D position
-	var vector = new THREE.Vector3(mouse.x, mouse.y, 0.5);
+	var vector = new THREE.Vector3(mouse.x, mouse.y, 0.35);
 	vector.unproject( camera );
 	var dir = vector.sub( camera.position ).normalize();
 	var distance = - camera.position.z / dir.z;
