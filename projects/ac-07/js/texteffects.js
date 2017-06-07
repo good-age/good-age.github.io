@@ -20,8 +20,21 @@ var TFX = {
 
 		var d = 0;
 		$('.text').children().each(function() {
-		    $(this).delay(d).fadeIn(TFX.fadeSpeed);
-		    d += TFX.sequenceSpeed;
+
+			if($(this).attr('id') == 'logo') {
+
+				// fade logo to 22% opacity
+				$("img#logo").delay(d).fadeTo(TFX.fadeSpeed, .22);
+			    d += TFX.sequenceSpeed;
+
+			} else {
+
+			    $(this).delay(d).fadeIn(TFX.fadeSpeed);
+			    d += TFX.sequenceSpeed;
+
+			}
+
+
 		});
 
 	}

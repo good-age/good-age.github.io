@@ -39,7 +39,7 @@ var windStrength = 0;
 var windForce = new THREE.Vector3( 0, 0, 0 );
 
 var ballPosition = new THREE.Vector3( 0, - 45, 0 );
-var ballSize = 20; //40
+var ballSize = 10; //40
 
 var tmpForce = new THREE.Vector3();
 
@@ -302,22 +302,6 @@ function simulate( time ) {
 
 	}
 
-
-	// Floor Constraints
-
-	for ( particles = cloth.particles, i = 0, il = particles.length; i < il; i ++ ) {
-
-		particle = particles[ i ];
-		pos = particle.position;
-		if ( pos.y < - 250 ) {
-
-			pos.y = - 250;
-
-		}
-
-	}
-
-	// Pin Constraints
 
 	for ( i = 0, il = pins.length; i < il; i ++ ) {
 
