@@ -13,17 +13,24 @@ generatePins(10, true, true);
 
 function generatePins (num, top, bottom) {
 
+	// total particles
+	// console.log("total particles: " + (cloth.w * cloth.h));
+
 	pins = [];
 
 	if(top === true) {
 			for(var i = 0; i < num; i++) {
-				pins.push(Math.round(lerp(0, cloth.w, (i/num))));
+				var pinPos = Math.round(lerp(0, cloth.w, (i/num)))
+				pins.push(pinPos);
+				// console.log("Pin at position " + pinPos);
 			}
 	}
 
 	if(bottom === true) {
 			for(var i = 0; i < num; i++) {
-				pins.push(Math.round(lerp(((cloth.w * cloth.h)-cloth.w), (cloth.w * cloth.h), (i/num))));
+				var pinPos = Math.round(lerp(((cloth.w * cloth.h)-cloth.w), (cloth.w * cloth.h), (i/num)));
+				pins.push(pinPos);
+				// console.log("Pin at position " + pinPos);				
 			}
 	}
 
@@ -66,7 +73,9 @@ function init() {
 	TFX.FadeIn();
 
 	container = document.createElement( 'div' );
-	document.body.appendChild( container );
+	var row = document.getElementById( 'canvas-container' );
+	row.appendChild( container );
+	//document.body.appendChild( container );
 
 	// scene
 
@@ -120,8 +129,10 @@ function init() {
 
 	// renderer
 
+	// var antialias = SS.isSafari ? false : true;
+
 	renderer = new THREE.WebGLRenderer( {
-		antialias: true,
+		antialias: false,
 		alpha: true } );
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );

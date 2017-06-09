@@ -1,11 +1,17 @@
 body
 {
+	
+	position: relative;
+
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 
+	background-color: rgb(8,34,98);
+	
 	margin : 0;
 	background-image: -webkit-linear-gradient(54deg, rgb(0,174,239) 5%, rgb(38,34,98) 99%);
 	background-image: -o-linear-gradient(54deg, rgb(0,174,239) 5%, rgb(38,34,98) 99%);
+	background-image: -moz-linear-gradient(54deg, rgb(0,174,239) 5%, rgb(38,34,98) 99%);	
 	/* background-image: linear-gradient(144deg, rgb(0,174,239) 5%, rgb(38,34,98) 99%); */
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -33,11 +39,18 @@ canvas
   z-index: -100;
 }
 
+div
+{
+	position: relative;
+}
+
 div.text
 {	
 	pointer-events: none;
 	margin-top: 120px;
 	z-index: 100;
+	transition: all 200ms linear;
+	-webkit-transition: all 200ms linear;
 }
 
 h1
@@ -67,18 +80,68 @@ span
 
 img#logo
 {
+	margin-bottom: 140px;
 	pointer-events: auto;
 	opacity: 0;
 	height: 32px;
-	transition: opacity 800ms linear;
-	-webkit-transition: opacity 800ms linear;
+	transition: opacity 200ms linear;
+	-webkit-transition: opacity 200ms linear;
 }
 
 img#logo:hover
 {
 	pointer-events: auto;	
 	opacity: 1!important;
-	transition: opacity 800ms linear;	
-	-webkit-transition: opacity 800ms linear;	
+	transition: opacity 200ms linear;	
+	-webkit-transition: opacity 200ms linear;	
 }
 
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+	canvas {
+	  /* height: 100%; */
+	  /* border: 2px solid red; */
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	}
+
+	#gradient-placeholder {
+		opacity: 0;
+	}
+
+	h1
+	{
+		font-size: 34px;
+		margin-bottom: 21px;			
+	}
+
+	p
+	{
+		font-size: 18px;
+		line-height: 22px;
+		margin-bottom: 17px;
+	}
+
+	div p:last-of-type {
+		margin-bottom: 35px;
+	}	
+
+	span
+	{
+
+	}
+
+	img
+	{
+		height: 28px;
+	}
+
+	div.text
+	{
+		margin-top: 60px;
+	}
+
+}

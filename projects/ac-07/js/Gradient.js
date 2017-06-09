@@ -10,7 +10,7 @@ var GR = {
 	p: null, // gradient placeholder
 	s: null, // m's style
 
-	prefix: null, // browser prefix
+	prefix: "", // browser prefix
 
 	defaultAngle: 144, // starting angle
 	default0Color: [0,174,239],
@@ -25,17 +25,12 @@ var GR = {
 	current1Percent: null,
 
 
-
 	Init: function() {
 
-		// Check Browser
-		var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-		var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-		var isOpera = /Opera/.test(navigator.userAgent);
-		if(isChrome || isSafari) {
+		if(SS.isChrome || SS.isSafari) {
 			GR.prefix = "-webkit-";
 		}
-		if(isOpera) {
+		if(SS.isOpera) {
 			GR.prefix = "-o-";
 		}
 
