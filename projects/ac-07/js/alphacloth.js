@@ -52,8 +52,8 @@ function togglePins() {
 
 if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
-// var container, stats;
-var container;
+var container, stats;
+// var container;
 var camera, scene, renderer;
 
 var clothGeometry;
@@ -72,9 +72,9 @@ function init() {
 	TFX.Init();
 	TFX.FadeIn();
 
-	container = document.createElement( 'div' );
-	var row = document.getElementById( 'canvas-container' );
-	row.appendChild( container );
+	// container = document.createElement( 'div' );
+	var canvasContainer = document.getElementById( 'body' );
+	// row.appendChild( container );
 	//document.body.appendChild( container );
 
 	// scene
@@ -138,7 +138,7 @@ function init() {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	renderer.setClearColor( 0x000000, 0 );
 
-	container.appendChild( renderer.domElement );
+	canvasContainer.appendChild( renderer.domElement );
 
 	renderer.gammaInput = true;
 	renderer.gammaOutput = true;
@@ -192,7 +192,7 @@ function onDocumentMouseMove( event ) {
 }
 
 
-//
+// 
 
 function onWindowResize() {
 
@@ -231,6 +231,8 @@ function animate() {
 
 function render() {
 
+	// Update aspect
+	SS.UpdateAspect(camera,renderer);
 
 	// update vertices
 	var p = cloth.particles;

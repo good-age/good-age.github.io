@@ -132,7 +132,7 @@ var GR = {
 		var targetAngle = Math.round(lerp(124, 154, mouse.x * GR.mouseOffset));
 
 		// what's the difference between default gradient and the target
-		$(GR.p).fadeOut(200);
+		$(GR.p).fadeOut(800);
 	
 		console.log("tween to gradient");
 

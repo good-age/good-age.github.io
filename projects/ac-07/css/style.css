@@ -19,6 +19,8 @@ body
 	font-family: 'Libre Franklin', sans-serif;
 	color: rgba(255,255,255,1);
 
+	overflow: hidden;
+
 }
 
 #gradient-placeholder {
@@ -69,7 +71,7 @@ p
 }
 
 div p:last-of-type {
-	margin-bottom: 40px;
+	margin-bottom: 32px;
 }
 
 span
@@ -83,7 +85,7 @@ img#logo
 	margin-bottom: 140px;
 	pointer-events: auto;
 	opacity: 0;
-	height: 32px;
+	height: 28px;
 	transition: opacity 200ms linear;
 	-webkit-transition: opacity 200ms linear;
 }
@@ -104,7 +106,7 @@ img#logo:hover
 	  /* height: 100%; */
 	  /* border: 2px solid red; */
 	  position: absolute;
-	  top: 0;
+	  bottom: 0;
 	  left: 0;
 	}
 
@@ -136,12 +138,23 @@ img#logo:hover
 
 	img
 	{
-		height: 28px;
+		height: 24px;
 	}
 
 	div.text
 	{
 		margin-top: 60px;
+		margin-bottom: 70px;		
+	}
+
+}
+
+/* XS Styles */
+@media (max-width: 320px) {
+
+	body
+	{
+		overflow: auto;
 	}
 
 }
