@@ -1,8 +1,6 @@
 body
 {
 	
-	position: relative;
-
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 
@@ -19,12 +17,10 @@ body
 	font-family: 'Libre Franklin', sans-serif;
 	color: rgba(255,255,255,1);
 
-	overflow: hidden;
-
 }
 
 #gradient-placeholder {
-	position: fixed;
+	position: absolute;
 	z-index: -200;
 	width: 100%;
 	height: 100%;
@@ -33,12 +29,14 @@ body
 
 canvas
 {
-  max-height: 100vh;
-  max-width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: -100;
+	transition: all 200ms linear;
+	-webkit-transition: all 200ms linear;  
 }
 
 div
@@ -102,12 +100,18 @@ img#logo:hover
 /* Mobile Styles */
 @media (max-width: 768px) {
 
+	body 
+	{
+		min-height: 100vh;
+		position: relative;
+	}
+
 	canvas {
-	  /* height: 100%; */
-	  /* border: 2px solid red; */
-	  position: absolute;
-	  bottom: 0;
-	  left: 0;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		transition: all 200ms linear;
+		-webkit-transition: all 200ms linear;  		
 	}
 
 	#gradient-placeholder {
@@ -136,7 +140,13 @@ img#logo:hover
 
 	}
 
-	img
+	img#logo
+	{
+		height: 24px;
+		margin-bottom: 20px;
+	}
+
+	img#logo:hover
 	{
 		height: 24px;
 	}
@@ -155,6 +165,12 @@ img#logo:hover
 	body
 	{
 		overflow: auto;
+	}
+
+	img#logo
+	{
+		height: 24px;
+		margin-bottom: 70px;
 	}
 
 }
