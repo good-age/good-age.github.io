@@ -107,6 +107,7 @@ img#logo:hover
 	}
 
 	canvas {
+		opacity: .22;
 		position: absolute;
 		bottom: 0;
 		right: 0;
@@ -116,28 +117,6 @@ img#logo:hover
 
 	#gradient-placeholder {
 		opacity: 0;
-	}
-
-	h1
-	{
-		font-size: 34px;
-		margin-bottom: 21px;			
-	}
-
-	p
-	{
-		font-size: 18px;
-		line-height: 22px;
-		margin-bottom: 17px;
-	}
-
-	div p:last-of-type {
-		margin-bottom: 35px;
-	}	
-
-	span
-	{
-
 	}
 
 	img#logo
@@ -154,7 +133,7 @@ img#logo:hover
 	div.text
 	{
 		margin-top: 60px;
-		margin-bottom: 70px;		
+		margin-bottom: 140px;		
 	}
 
 }
